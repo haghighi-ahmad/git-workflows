@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Git Workflow</title>
+
+	<meta name="description" content="An introduction to some popular Git Workflows.">
+	<meta name="author" content="Ahmad Haghighi">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h1>Git Workflow</h1>
+				<em>An introduction to some popular Git Workflows</em>
+				</br>
+				<p>
+					<strong><b><a target="blank" href="https://haghighi.site">Ahmad Haghighi</a></b></strong></br>
+				</p>
+			</br>
+				<p>
+					<small><a target="blank" href="https://haghighi.site">https://haghighi.site</a></br><a href="mailto:haghighi@fedoraproject.org">haghighi@fedoraproject.org</a></small>
+				</p>
+
+			</section>
+
+			<section>
+				<h2>ToC</h2>
+				<ul>
+					<li>Git</li>
+					<li>Git terminologies</li>
+					<li>Centralized workflow</li>
+					<li>Forking workflow</li>
+					<li>Feature-branching workflow</li>
+					<li>Spring-branching workflow</li>
+					<li>Gitflow</li>
+					<li>GitHub flow</li>
+					<li>GitLab flow</li>
+					<li>Q&A</li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h2>Git</h2>
+				</section>
+				<section>
+
+					<h2>Git</h2>
+					<ul>
+						<li>Distributed Version Control System</li>
+						<li>Free and open source</li>
+						<li>Fast, Secure, Easy</li>
+						<li>Local repositories</li>
+						<li>Working Directory, Staging Area (Index), Git Repository</li>
+					</ul>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Terminologies</h2>
+				</section>
+				<section>
+					<h2>Terminologies</h2>
+					<table>
+						<tbody>
+							<tr>
+								<td>Blobs</td>
+								<td>Trees</td>
+								<td>Commits</td>
+							</tr>
+							<tr>
+								<td>Branchs</td>
+								<td>Tags</td>
+								<td>Clone</td>
+							</tr>
+							<tr>
+								<td>Forks</td>
+								<td>Pull</td>
+								<td>Push</td>
+							</tr>
+							<tr>
+								<td>HEAD</td>
+								<td>Revision</td>
+								<td>URL</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			</section>
+		</div>
+
+	</div>
+
+	<script src="js/reveal.js"></script>
+
+	<script>
+
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/highlight/highlight.js', async: true },
+				{ src: 'plugin/search/search.js', async: true },
+				{ src: 'plugin/zoom-js/zoom.js', async: true },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+		// Shows the slide number using default formatting
+		Reveal.configure({ slideNumber: true });
+	</script>
+
+</body>
+
+</html>
