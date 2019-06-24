@@ -114,7 +114,6 @@
 					<h2>Git</h2>
 				</section>
 				<section>
-
 					<h2>Git</h2>
 					<ul>
 						<li>Distributed Version Control System</li>
@@ -123,6 +122,13 @@
 						<li>Local repositories</li>
 						<li>Working Directory, Staging Area (Index), Git Repository</li>
 					</ul>
+				</section>
+				<section>
+					<strong>Git stages</strong>
+					</br>
+					<object style="width:90%; height: auto;" type="image/png" data="images/git-stages.png">
+						Your browser does not support PNG
+					</object>
 				</section>
 			</section>
 
@@ -165,13 +171,15 @@
 				</section>
 				<section>
 					<h3>Centralized workflow</h3>
-					<object type="image/svg+xml" data="images/centralized-workflow01.svg">
+					<object style="width:100%; height: auto;" type="image/svg+xml"
+						data="images/centralized-workflow01.svg">
 						Your browser does not support SVG
 					</object>
 				</section>
 				<section>
 					<h3>Centralized workflow</h3>
-					<object type="image/svg+xml" data="images/centralized-workflow02.svg">
+					<object style="width:100%; height: auto;" type="image/svg+xml"
+						data="images/centralized-workflow02.svg">
 						Your browser does not support SVG
 					</object>
 				</section>
@@ -183,7 +191,7 @@
 				</section>
 				<section>
 					<h3>Forking workflow</h3>
-					<object type="image/svg+xml" data="images/forking-workflow01.svg">
+					<object style="width:100%; height: auto;" type="image/svg+xml" data="images/forking-workflow01.svg">
 						Your browser does not support SVG
 					</object>
 				</section>
@@ -195,19 +203,19 @@
 				</section>
 				<section>
 					<h3>Feature-branch workflow</h3>
-					<object type="image/svg+xml" data="images/feature-workflow01.svg">
+					<object style="width:100%; height: auto;" type="image/svg+xml" data="images/feature-workflow01.svg">
 						Your browser does not support SVG
 					</object>
 				</section>
 				<section>
 					<h3>Feature-branch workflow</h3>
-					<object type="image/svg+xml" data="images/feature-workflow02.svg">
+					<object style="width:100%; height: auto;" type="image/svg+xml" data="images/feature-workflow02.svg">
 						Your browser does not support SVG
 					</object>
 				</section>
 				<section>
 					<h3>Feature-branch workflow</h3>
-					<object type="image/png" data="images/feature-workflow03.png">
+					<object style="width:100%; height: auto;" type="image/png" data="images/feature-workflow03.png">
 						Your browser does not support PNG
 					</object>
 				</section>
@@ -240,6 +248,193 @@
 				</section>
 				<section>
 					<h3>Gitflow</h3>
+					</br>
+					<ul>
+						<li><strong class="fragment highlight-green" data-fragment-index="1">Main branches</strong>
+							<ul style="list-style-type:none;">
+								<li class="fragment fade-right" data-fragment-index="1">master</li>
+								<li class="fragment fade-right" data-fragment-index="1">develop</li>
+							</ul>
+						</li>
+						<li><strong class="fragment highlight-green" data-fragment-index="1">Supporting
+								branches</strong>
+							<ul style="list-style-type:none;">
+								<li class="fragment fade-right" data-fragment-index="1">Feature branches</li>
+								<li class="fragment fade-right" data-fragment-index="1">Release branches</li>
+								<li class="fragment fade-right" data-fragment-index="1">Hotfix branches</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<strong>Gitflow: "develop" branch</strong>
+					</br>
+					<object style="width:100%; height: auto;" type="image/svg+xml" data="images/gitflow-develop.svg">
+						Your browser does not support SVG
+					</object>
+				</section>
+
+				<section>
+					<strong>Gitflow: "develop" branch</strong>
+					</br>
+					<div style="float: right; width: 35%">
+						<img src="./images/gitflow2-develop.png" />
+					</div>
+					<div style="width: 65%">
+						</br>
+						<ul>
+							<li>Infinite lifetime</li>
+							<li>HEAD of master:
+								<ul style="list-style-type:none;">
+									<small>
+										<li>production-ready state</li>
+									</small>
+								</ul>
+							</li>
+							<li>HEAD of develop:
+								<ul style="list-style-type:none;">
+									<small>
+										<li>Latest delivered development changes for the next release</li>
+										<li>This is where any automatic nightly builds are built from.</li>
+									</small>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<strong>Gitflow: "feature" branches</strong>
+					</br>
+					<object style="width:100%; height: auto;" type="image/svg+xml" data="images/gitflow-feature.svg">
+						Your browser does not support SVG
+					</object>
+				</section>
+				<section>
+					<strong>Gitflow: "feature" branch</strong>
+					</br>
+					<div style="float: right; width: 35%">
+						<img width="65%" src="./images/gitflow2-feature.png" />
+					</div>
+					<div style="width: 65%">
+						</br>
+						<ul>
+							<li>Limit lifetime</li>
+							<li>May branch off from:
+								<ul style="list-style-type:none;">
+									<small>
+										<li><code>develop</code></li>
+									</small>
+								</ul>
+							</li>
+							<li>Must merge back into:
+								<ul style="list-style-type:none;">
+									<small>
+										<li><code>develop</code></li>
+									</small>
+								</ul>
+							</li>
+							<li>Branch naming convention:
+								<ul style="list-style-type:none;">
+									<small>
+										<li>anything except master, <code>develop</code>, <code>release-*</code>, or
+											<code>hotfix-*</code></li>
+									</small>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<strong>Gitflow: "feature" branch - Merge with <code>--no-ff</code></strong>
+					</br>
+					<object style="width:70%; height: auto;" type="image/png" data="images/gitflow2-ff.png">
+						Your browser does not support PNG
+					</object>
+				</section>
+				<section>
+					<strong>Gitflow: "release" branches</strong>
+					</br>
+					<object style="width:100%; height: auto;" type="image/svg+xml" data="images/gitflow-release.svg">
+						Your browser does not support SVG
+					</object>
+				</section>
+				<section>
+					<strong>Gitflow: "release" branch</strong>
+					</br>
+					<div style="float: right; width: 65%">
+						<img src="./images/gitflow2-release.png" />
+					</div>
+					<div style="width: 35%">
+						</br>
+						<small>
+							<ul>
+								<li>May branch off from:
+									<ul style="list-style-type:none;">
+										<small>
+											<li><code>develop</code></li>
+										</small>
+									</ul>
+								</li>
+								<li>Must merge back into:
+									<ul style="list-style-type:none;">
+										<small>
+											<li><code>develop</code> and <code>master</code></li>
+										</small>
+									</ul>
+								</li>
+								<li>Branch naming convention:
+									<ul style="list-style-type:none;">
+										<small>
+											<li><code>release-*</code></li>
+										</small>
+									</ul>
+								</li>
+							</ul>
+						</small>
+					</div>
+				</section>
+				<section>
+					<strong>Gitflow: "hotfix" branches</strong>
+					</br>
+					<object style="width:90%; height: auto;" type="image/svg+xml" data="images/gitflow-hotfix.svg">
+						Your browser does not support SVG
+					</object>
+				</section>
+				<section>
+					<strong>Gitflow: "hotfix" branch</strong>
+					</br>
+					<div style="float: right; width: 35%">
+						<img src="./images/gitflow2-hotfix.png" />
+					</div>
+					<div style="width: 65%">
+						</br>
+						<ul>
+							<li>May branch off from:
+								<ul style="list-style-type:none;">
+									<small>
+										<li><code>master</code></li>
+									</small>
+								</ul>
+							</li>
+							<li>Must merge back into:
+								<ul style="list-style-type:none;">
+									<small>
+										<li><code>develop</code> and <code>master</code></li>
+									</small>
+								</ul>
+							</li>
+							<li>Branch naming convention:
+								<ul style="list-style-type:none;">
+									<small>
+										<li><code>hotfix-*</code></li>
+									</small>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section data-background-image="images/gitflow-full.png" data-background-size="contain"
+					data-background-repeat="no-repeat">
 				</section>
 			</section>
 
@@ -249,6 +444,20 @@
 				</section>
 				<section>
 					<h2>GitHub flow</h2>
+					<object style="width:45%; height: auto;" type="image/png" data="images/github_flow.png">
+						Your browser does not support SVG
+					</object>
+				</section>
+				<section>
+					<h2>GitHub flow</h2>
+					<ul>
+						<li>Anything in the master branch is deployable</li>
+						<li>Create descriptive branches off of master</li>
+						<li>Push to named branches constantly</li>
+						<li>Open a pull request at any time</li>
+						<li>Merge only after pull request review</li>
+						<li>Deploy immediately after review</li>
+					</ul>
 				</section>
 			</section>
 
@@ -257,21 +466,42 @@
 					<h2>GitLab flow</h2>
 				</section>
 				<section>
-					<h2>GitLab flow</h2>
+					<strong>GitLab flow: Production branch</strong>
+					</br>
+					<object style="width:35%; height: auto;" type="image/png"
+						data="images/gitlab-flow-production_branch.png">
+						Your browser does not support SVG
+					</object>
+				</section>
+				<section>
+					<strong>GitLab flow: Environment branches</strong>
+					</br>
+					<object style="width:45%; height: auto;" type="image/png"
+						data="images/gitlab-flow-environment_branches.png">
+						Your browser does not support SVG
+					</object>
+				</section>
+				<section>
+					<strong>GitLab flow: Release branches</strong>
+					</br>
+					<object style="width:45%; height: auto;" type="image/png"
+						data="images/gitlab-flow-release_branches.png">
+						Your browser does not support SVG
+					</object>
 				</section>
 			</section>
 
 			<section>
-				<section>
-					<h2>Q&A</h2>
-				</section>
-				<section>
-					<h2>Q&A</h2>
-				</section>
+				<h2>Q&A</h2>
+				</br></br></br></br></br>
+				<small>Images from atlassian.com and nvie.com</small>
 			</section>
 
 			<section>
 				<h2>Thanks</h2>
+				<object style="width:10%; height: auto;" type="image/png" data="images/logo.png">
+					Your browser does not support PNG
+				</object>
 			</section>
 
 
@@ -290,6 +520,8 @@
 			center: true,
 			hash: true,
 
+			// width: 960,
+			// height: 700,
 
 			transition: 'slide', // none/fade/slide/convex/concave/zoom
 
